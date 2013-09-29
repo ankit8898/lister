@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('angularDemoApp')
-  .controller('UsercontrollerCtrl', function ($scope,Datum) {
-    $scope.factory = Datum.query();
-
-    // $scope.reversedArray = function(arr){
-    // 	var v = {message: "From Method", bb: arr.reverse()};
-    // 	return v;
-    // }
-  });
+.controller('UsercontrollerCtrl', function ($scope,User) {
+	$scope.users = User.query();
+	
+	$scope.create = function(name, age) {
+		User.save({name: name, age: age}, function(user) {
+			$scope.users.push(user);
+		});
+	};
+});
