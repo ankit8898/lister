@@ -31,11 +31,13 @@
   					<thead>
   						<th>Name</th>
   						<th>Age</th>
+  						<th>Delete</th>
   					</thead>
   					<tbody>
   						<tr ng-repeat="user in users">
   							<td>{{user.name}}</td>
   							<td>{{user.age}}</td>
+  							<td><a href="" title="Delete" ng-click="delete($index)" class="pull-right">Delete</a></td>
   						</tr>
   					</tbody>
   				</table>

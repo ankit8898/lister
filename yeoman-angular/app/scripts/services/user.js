@@ -6,7 +6,7 @@ angular.module('angularDemoApp')
     // ...
 
     //var r = {arr: [1,2,3,4,5,6,7], name: "From factory!"};
-    return $resource('http://localhost\\:3000/users');
+    return $resource('/api/users/:id');
     // Public API here
   
   });

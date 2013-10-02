@@ -6,13 +6,18 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		logger.info "--------#{user_params.inspect}"
 		@user  = User.new(user_params)
 		if @user.save
 			render json: @user, status: :ok
 		else
 			render json: @user.errors, status: :unprocessable_entity
 		end
+	end
+
+	def destroy
+		@user = User.find(params[:id])
+		@user.destroy
+		head :no_content
 	end
 
 	private
