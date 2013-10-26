@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem "rails", "~> 4.0.1.rc3"
 
 gem 'rails-api'
 
@@ -23,4 +23,3 @@ gem 'sqlite3'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-gem 'rack-cors', :require => 'rack/cors'
